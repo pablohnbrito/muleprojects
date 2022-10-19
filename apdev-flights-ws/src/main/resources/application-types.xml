@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<types:mule xmlns:types="http://www.mulesoft.org/schema/mule/types">
+  <types:catalog>
+    <types:type name="flights_json" format="json">
+      <types:shape format="weave" example="examples/flights-example.json"><![CDATA[%dw 2.0
+
+type flights_json = Array<{|  airline: String,   flightCode: String,   fromAirportCode: String,   toAirportCode: String,   departureDate: String,   emptySeats: Number {"typeId": "int"},   totalSeats: Number {"typeId": "int"},   price: Number {"typeId": "int"},   planeType: String|}> {"example": "[{\\\"airline\\\":\\\"United\\\",\\\"flightCode\\\":\\\"ER38sd\\\",\\\"fromAirportCode\\\":\\\"LAX\\\",\\\"toAirportCode\\\":\\\"SFO\\\",\\\"departureDate\\\":\\\"May 21, 2016\\\",\\\"emptySeats\\\":0,\\\"totalSeats\\\":200,\\\"price\\\":199,\\\"planeType\\\":\\\"Boeing 737\\\"},{\\\"airline\\\":\\\"Delta\\\",\\\"flightCode\\\":\\\"ER0945\\\",\\\"fromAirportCode\\\":\\\"PDX\\\",\\\"toAirportCode\\\":\\\"CLE\\\",\\\"departureDate\\\":\\\"June 1, 2016\\\",\\\"emptySeats\\\":24,\\\"totalSeats\\\":350,\\\"price\\\":450,\\\"planeType\\\":\\\"Boeing 747\\\"}]"}
+
+]]></types:shape>
+    </types:type>
+    <types:type name="flight_json" format="json">
+      <types:shape format="weave" example="examples/flight-example.json"><![CDATA[%dw 2.0
+
+type flight_json = {|
+  airline: String, 
+  flightCode: String, 
+  fromAirportCode: String, 
+  toAirportCode: String, 
+  departureDate: String, 
+  emptySeats: Number {"typeId": "int"}, 
+  totalSeats: Number {"typeId": "int"}, 
+  price: Number {"typeId": "int"}, 
+  planeType: String
+|} {"example": "{\\\"airline\\\":\\\"United\\\",\\\"flightCode\\\":\\\"ER38sd\\\",\\\"fromAirportCode\\\":\\\"LAX\\\",\\\"toAirportCode\\\":\\\"SFO\\\",\\\"departureDate\\\":\\\"May 21, 2016\\\",\\\"emptySeats\\\":0,\\\"totalSeats\\\":200,\\\"price\\\":199,\\\"planeType\\\":\\\"Boeing 737\\\"}"}
+
+]]></types:shape>
+    </types:type>
+    <types:type name="flights_xml" format="xml">
+      <types:example format="xml" element="{http://soap.training.mulesoft.com/}listAllFlightsResponse" location="examples/flights-example.xml"/>
+    </types:type>
+    <types:type name="Flight_pojo" format="java">
+      <types:shape format="java" element="com.mulesoft.training.Flight"/>
+    </types:type>
+  </types:catalog>
+</types:mule>

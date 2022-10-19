@@ -3,11 +3,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.mycompany</groupId>
-	<artifactId>apdev-examples</artifactId>
+	<artifactId>apdev-flights-ws</artifactId>
 	<version>1.0.0-SNAPSHOT</version>
 	<packaging>mule-application</packaging>
 
-	<name>apdev-examples</name>
+	<name>apdev-flights-ws</name>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -42,20 +42,14 @@
 		</dependency>
 		<dependency>
 			<groupId>org.mule.connectors</groupId>
-			<artifactId>mule-vm-connector</artifactId>
-			<version>2.0.0</version>
-			<classifier>mule-plugin</classifier>
-		</dependency>
-		<dependency>
-			<groupId>com.mulesoft.connectors</groupId>
-			<artifactId>mule-salesforce-connector</artifactId>
-			<version>10.16.0</version>
-			<classifier>mule-plugin</classifier>
-		</dependency>
-		<dependency>
-			<groupId>org.mule.connectors</groupId>
 			<artifactId>mule-sockets-connector</artifactId>
-			<version>1.2.3</version>
+			<version>1.2.2</version>
+			<classifier>mule-plugin</classifier>
+		</dependency>
+		<dependency>
+			<groupId>org.mule.modules</groupId>
+			<artifactId>mule-apikit-module</artifactId>
+			<version>1.6.1</version>
 			<classifier>mule-plugin</classifier>
 		</dependency>
 	</dependencies>
