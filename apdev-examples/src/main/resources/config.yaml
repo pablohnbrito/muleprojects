@@ -1,7 +1,0 @@
-http:
-  port: "8081"
-  
-sfdc:
-  username: "pablo.henrique.brito@brave-narwhal-szl5pd.com"
-  password: "Pablohenrique10"
-  token: "9T6VrDpJdgrRsy2HUS75uvMfG"
